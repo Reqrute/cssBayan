@@ -1,0 +1,49 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(218, 215, 215);
+}
+
+h1 {
+    font-size: 4vh;
+}
+
+h2 {
+    font-size: 3vh;
+}
+
+.container {
+    width: 60%;
+    padding: 1rem;
+    margin: 2rem auto;
+    background-color: rgba(67, 67, 67, 0.5);
+    border-radius: 10px;
+}
+
+.accordion-container {
+    cursor: pointer;
+    padding: 0;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.accordion-content {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+  
+.accordion-meme {
+    border: 1rem black;
+    width: 40% ;
+    height :40% ;
+}
+  
+.accordion-checkbox {
+    display: none;
+}
+  
