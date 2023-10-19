@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(218, 215, 215);
+}
+
+h1 {
+    font-size: 4vh;
+}
+
+h2 {
+    font-size: 3vh;
+}
+
+.container {
+    width: 60%;
+    padding: 1rem;
+    margin: 2rem auto;
+    background-color: rgba(67, 67, 67, 0.5);
+}
+
+.accordion-container {
+    padding: 0.5;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+  
+.accordion-content {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    cursor: pointer;
+}
+  
+.accordion-meme {
+    border: 1rem black;
+    width: 0% ;
+    height: 0%;
+    margin-bottom: 0;
+    transition: width 0.5s, height 0.5s, margin-bottom 0.5s;
+    transition-timing-function: ease-in;
+}
+  
+.accordion-checkbox {
+    display: none;
+}
+
+.accordion-check {
+    width : 2vh; 
+    height: 2vh; 
+}
+
+.container:hover .accordion-header .accordion-check {
+    display: block;
+  }
+   
+.accordion-container:hover .accordion-checkbox:not(:checked) + .accordion-label .accordion-header .accordion-check {
+    content: url('img/close.png');
+}
+  
+.accordion-checkbox:checked + .accordion-label .accordion-header img {
+    content: url('img/close.png')
+}
+  
+.accordion-container:hover .accordion-header {
+    color: #ffffff;
+}
+
+.accordion-checkbox:checked + .accordion-label .accordion-header {
+    color: #f0f0f0;
+}
+  
+.accordion-header:hover + .accordion-content .accordion-meme,
+.accordion-content:hover .accordion-meme,
+.accordion-checkbox:checked + .accordion-label .accordion-content .accordion-meme {
+    width: 40%;
+    max-width: 80%;
+    margin-bottom: 2rem;
+    height: auto;
+    transition: width 0.5s, height 0.5s, padding 0.5s;
+}
